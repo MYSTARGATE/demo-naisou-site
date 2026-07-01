@@ -7,50 +7,113 @@
   <meta name="description" content="yamaki corporationへのお問い合わせ・お見積り依頼・採用・協力会社募集はこちらから。">
   <link rel="stylesheet" href="style.css">
   <style>
-    .contact-page{max-width:900px;margin:120px auto 80px;padding:0 20px;}
-    .contact-page h1{font-size:34px;letter-spacing:.08em;margin-bottom:10px;color:#1b3c30;}
-    .contact-lead{color:#555;margin-bottom:32px;line-height:1.9;}
-    .contact-form{background:#fff;border:1px solid #e6dfd4;padding:34px;box-shadow:0 10px 30px rgba(0,0,0,.06);}
-    .form-row{margin-bottom:18px;}
-    .form-row label{display:block;font-weight:700;margin-bottom:7px;color:#222;}
-    .form-row small{color:#777;font-weight:400;}
-    .contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:13px 14px;border:1px solid #d8d0c4;font-size:16px;box-sizing:border-box;background:#fafafa;}
-    .contact-form textarea{min-height:170px;resize:vertical;}
-    .hp-field{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;}
-    .submit-btn{width:100%;border:0;background:#1b3c30;color:#fff;padding:16px;font-size:17px;font-weight:700;cursor:pointer;}
-    .submit-btn:hover{opacity:.9;}
-    .back-link{display:inline-block;margin-top:24px;color:#1b3c30;text-decoration:none;}
-    @media(max-width:600px){
-      .contact-page{margin:90px auto 60px;}
-      .contact-form{padding:22px;}
-      .contact-page h1{font-size:28px;}
-       .privacy-check label{
+    .contact-page{
+      max-width:900px;
+      margin:120px auto 80px;
+      padding:0 20px;
+    }
+    .contact-page h1{
+      font-size:34px;
+      letter-spacing:.08em;
+      margin-bottom:10px;
+      color:#1b3c30;
+    }
+    .contact-lead{
+      color:#555;
+      margin-bottom:32px;
+      line-height:1.9;
+    }
+    .contact-form{
+      background:#fff;
+      border:1px solid #e6dfd4;
+      padding:34px;
+      box-shadow:0 10px 30px rgba(0,0,0,.06);
+    }
+    .form-row{
+      margin-bottom:18px;
+    }
+    .form-row label{
+      display:block;
+      font-weight:700;
+      margin-bottom:7px;
+      color:#222;
+    }
+    .form-row small{
+      color:#777;
+      font-weight:400;
+    }
+    .contact-form input:not([type="checkbox"]),
+    .contact-form select,
+    .contact-form textarea{
+      width:100%;
+      padding:13px 14px;
+      border:1px solid #d8d0c4;
+      font-size:16px;
+      box-sizing:border-box;
+      background:#fafafa;
+    }
+    .contact-form textarea{
+      min-height:170px;
+      resize:vertical;
+    }
+    .hp-field{
+      position:absolute;
+      left:-10000px;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    .privacy-check{
+      margin:18px 0 22px;
+    }
+    .privacy-check label{
       display:inline-flex;
       align-items:center;
       gap:8px;
+      margin:0;
       font-weight:400;
+      line-height:1.6;
+      white-space:nowrap;
     }
-      .privacy-check input{
-        width:auto;
-        margin:0;
+    .privacy-check input[type="checkbox"]{
+      width:16px;
+      height:16px;
+      margin:0;
+      flex:0 0 auto;
     }
-      .privacy-check{
-        display:flex;
-        align-items:center;
-        gap:8px;
+    .submit-btn{
+      width:100%;
+      border:0;
+      background:#1b3c30;
+      color:#fff;
+      padding:16px;
+      font-size:17px;
+      font-weight:700;
+      cursor:pointer;
+    }
+    .submit-btn:hover{
+      opacity:.9;
+    }
+    .back-link{
+      display:inline-block;
+      margin-top:24px;
+      color:#1b3c30;
+      text-decoration:none;
+    }
+    @media(max-width:600px){
+      .contact-page{
+        margin:90px auto 60px;
+      }
+      .contact-form{
+        padding:22px;
+      }
+      .contact-page h1{
+        font-size:28px;
       }
       .privacy-check label{
-        display:flex;
-        align-items:center;
-        gap:8px;
-        margin:0;
+        white-space:normal;
       }
-      .privacy-check input[type="checkbox"]{
-        width:16px !important;
-        height:16px !important;
-        margin:0 !important;
-        flex:0 0 auto;
-      }
+    }
   </style>
 </head>
 <body>
@@ -61,8 +124,10 @@
       工事のご相談、お見積り依頼、採用、協力会社に関するお問い合わせはこちらからお願いいたします。
     </p>
 
-    <!-- action の xxxxxxxx をFormspreeで発行されたIDに変更してください -->
+    <!-- xxxxxxxx をあなたのFormspree IDに変更してください -->
     <form class="contact-form" action="https://formspree.io/f/xaqgpbka" method="POST">
+
+      <input type="hidden" name="_subject" value="Yamaki Corporation ホームページお問い合わせ">
 
       <div class="form-row">
         <label>お名前 <small>必須</small></label>
@@ -111,7 +176,7 @@
           個人情報の取り扱いに同意します
         </label>
       </div>
-      
+
       <button class="submit-btn" type="submit">送信する</button>
     </form>
 
@@ -120,4 +185,3 @@
 
 </body>
 </html>
-
