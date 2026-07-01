@@ -24,6 +24,13 @@
       .contact-page{margin:90px auto 60px;}
       .contact-form{padding:22px;}
       .contact-page h1{font-size:28px;}
+       .privacy-check label{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:400;
+      line-height:1.6;
+    }
     }
   </style>
 </head>
@@ -79,6 +86,13 @@
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
       </div>
 
+      <div class="form-row privacy-check">
+        <label>
+          <input type="checkbox" name="privacy_agree" required>
+          個人情報の取り扱いに同意します
+        </label>
+      </div>
+      
       <button class="submit-btn" type="submit">送信する</button>
     </form>
 
