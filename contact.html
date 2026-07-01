@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | yamaki corporation</title>
+  <meta name="description" content="yamaki corporationへのお問い合わせ・お見積り依頼・採用・協力会社募集はこちらから。">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-page{max-width:900px;margin:120px auto 80px;padding:0 20px;}
+    .contact-page h1{font-size:34px;letter-spacing:.08em;margin-bottom:10px;color:#1b3c30;}
+    .contact-lead{color:#555;margin-bottom:32px;line-height:1.9;}
+    .contact-form{background:#fff;border:1px solid #e6dfd4;padding:34px;box-shadow:0 10px 30px rgba(0,0,0,.06);}
+    .form-row{margin-bottom:18px;}
+    .form-row label{display:block;font-weight:700;margin-bottom:7px;color:#222;}
+    .form-row small{color:#777;font-weight:400;}
+    .contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:13px 14px;border:1px solid #d8d0c4;font-size:16px;box-sizing:border-box;background:#fafafa;}
+    .contact-form textarea{min-height:170px;resize:vertical;}
+    .hp-field{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;}
+    .submit-btn{width:100%;border:0;background:#1b3c30;color:#fff;padding:16px;font-size:17px;font-weight:700;cursor:pointer;}
+    .submit-btn:hover{opacity:.9;}
+    .back-link{display:inline-block;margin-top:24px;color:#1b3c30;text-decoration:none;}
+    @media(max-width:600px){
+      .contact-page{margin:90px auto 60px;}
+      .contact-form{padding:22px;}
+      .contact-page h1{font-size:28px;}
+    }
+  </style>
+</head>
+<body>
+
+  <main class="contact-page">
+    <h1>お問い合わせ</h1>
+    <p class="contact-lead">
+      工事のご相談、お見積り依頼、採用、協力会社に関するお問い合わせはこちらからお願いいたします。
+    </p>
+
+    <!-- action の xxxxxxxx をFormspreeで発行されたIDに変更してください -->
+    <form class="contact-form" action="https://formspree.io/f/xxxxxxxx" method="POST">
+
+      <div class="form-row">
+        <label>お名前 <small>必須</small></label>
+        <input type="text" name="お名前" required>
+      </div>
+
+      <div class="form-row">
+        <label>会社名 <small>任意</small></label>
+        <input type="text" name="会社名">
+      </div>
+
+      <div class="form-row">
+        <label>メールアドレス <small>必須</small></label>
+        <input type="email" name="メールアドレス" required>
+      </div>
+
+      <div class="form-row">
+        <label>電話番号 <small>任意</small></label>
+        <input type="tel" name="電話番号">
+      </div>
+
+      <div class="form-row">
+        <label>お問い合わせ種別</label>
+        <select name="お問い合わせ種別">
+          <option value="お問い合わせ">お問い合わせ</option>
+          <option value="お見積り依頼">お見積り依頼</option>
+          <option value="採用について">採用について</option>
+          <option value="協力会社について">協力会社について</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>お問い合わせ内容 <small>必須</small></label>
+        <textarea name="お問い合わせ内容" required></textarea>
+      </div>
+
+      <!-- ハニーポット：人間は入力しない欄 -->
+      <div class="hp-field" aria-hidden="true">
+        <label>入力しないでください</label>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+
+      <button class="submit-btn" type="submit">送信する</button>
+    </form>
+
+    <a class="back-link" href="index.html">← トップページへ戻る</a>
+  </main>
+
+</body>
+</html>
 
